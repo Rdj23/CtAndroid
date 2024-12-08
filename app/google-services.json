@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "651673988710",
+    "project_id": "rohandj-7261d",
+    "storage_bucket": "rohandj-7261d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651673988710:android:0baa7c28f71fe7d9d207a7",
+        "android_client_info": {
+          "package_name": "com.example.ctandroid"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMMuLVLBR_uPyppmRMR9m3rNkOgsHusCM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

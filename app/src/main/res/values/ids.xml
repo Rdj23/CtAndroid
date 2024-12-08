@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="product1_name" type="id" />
+    <item name="product1_price" type="id" />
+    <item name="select_product1" type="id" />
+    <item name="product2_image" type="id" />
+    <item name="product2_name" type="id" />
+    <item name="product2_price" type="id" />
+    <item name="select_product2" type="id" />
+    <item name="buy_now_button" type="id" />
+    <item name="product1_image" type="id" />
+    <item name="saveButton" type="id" />
+    <item name="subscriptionType" type="id" />
+    <item name="profileImage" type="id" />
+    <item name="logoutButton" type="id" />
+</resources>
