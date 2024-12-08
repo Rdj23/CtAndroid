@@ -11,7 +11,7 @@ import java.util.HashMap;
 
 public class HomeScreenActivity extends AppCompatActivity {
 
-    private Button buyNowButton;
+    private Button buyNowButton,inApp;
     private ImageView profileIcon;
     private HashMap<String, Object> productDetails;
     private CleverTapAPI cleverTapInstance;
@@ -30,6 +30,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         // Find UI elements
         buyNowButton = findViewById(R.id.buy_now_button);
         profileIcon = findViewById(R.id.profile_icon);
+        Button inApp = findViewById(R.id.inAppNotification);
 
         // Profile icon click listener
         profileIcon.setOnClickListener(v -> {
@@ -100,5 +101,15 @@ public class HomeScreenActivity extends AppCompatActivity {
             // Push the updated profile to CleverTap
             cleverTapInstance.pushProfile(profileUpdate);
         }
+
+        inApp.setOnClickListener(v -> {
+            Toast.makeText(this, "In-App!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, InApp.class));
+        });
+
+
     }
-}
+
+    }
+
+
