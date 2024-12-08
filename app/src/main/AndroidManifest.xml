@@ -20,6 +20,9 @@
         android:theme="@style/Theme.CtAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".NativeDisplay"
+            android:exported="false" />
+        <activity
             android:name=".appInbox"
             android:exported="false" />
         <activity

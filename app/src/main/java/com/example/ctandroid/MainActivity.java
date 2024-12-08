@@ -41,7 +41,9 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity implements CTInboxListener {
     FirebaseAuth firebaseAuth;
     CleverTapAPI clevertapDefaultInstance;
+
     Button btnInbox;
+
 
 
 
@@ -73,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements CTInboxListener {
         Button loginButton = findViewById(R.id.loginButton);
         Button registerButton = findViewById(R.id.registerButton);
         Button skipButton = findViewById(R.id.skipButton);
+        Button btnNative = findViewById(R.id.appNative);
         Button inApp = findViewById(R.id.inAppNotification);
         btnInbox = findViewById(R.id.appInbox);
 
@@ -122,7 +125,15 @@ public class MainActivity extends AppCompatActivity implements CTInboxListener {
 
         inApp.setOnClickListener(v -> {
             Toast.makeText(this, "In-App!", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, InApp.class));
+            startActivity(new Intent(this,InApp.class));
+            ;
+        });
+
+        btnNative.setOnClickListener(v -> {
+            Toast.makeText(this, "Native Display!", Toast.LENGTH_SHORT).show();
+
+            startActivity(new Intent(this,NativeDisplay.class));
+            clevertapDefaultInstance.pushEvent("App Native");
         });
 
 

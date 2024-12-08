@@ -1,5 +1,7 @@
 package com.example.ctandroid;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -30,7 +32,13 @@ public class HomeScreenActivity extends AppCompatActivity {
         // Find UI elements
         buyNowButton = findViewById(R.id.buy_now_button);
         profileIcon = findViewById(R.id.profile_icon);
-        Button inApp = findViewById(R.id.inAppNotification);
+        inApp = findViewById(R.id.inAppNotification);
+
+
+        inApp.setOnClickListener(v -> {
+            Toast.makeText(this, "In-App!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, InApp.class));
+        });
 
         // Profile icon click listener
         profileIcon.setOnClickListener(v -> {
@@ -66,6 +74,8 @@ public class HomeScreenActivity extends AppCompatActivity {
         buyNowButton.setEnabled(false);
     }
 
+
+
     private void updateProductDetails(String name, int price) {
         // Update product details
         productDetails.put("name", name);
@@ -88,6 +98,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         }
     }
 
+
     private void triggerProductBoughtEvent(HashMap<String, Object> productDetails) {
         if (cleverTapInstance != null) {
             // Log the "Charged" event
@@ -102,14 +113,14 @@ public class HomeScreenActivity extends AppCompatActivity {
             cleverTapInstance.pushProfile(profileUpdate);
         }
 
-        inApp.setOnClickListener(v -> {
-            Toast.makeText(this, "In-App!", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, InApp.class));
-        });
+
+
 
 
     }
 
-    }
+
+
+}
 
 
